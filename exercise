@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+struct point{
+    int x;
+    int y;
+}p1;
+struct point p2={3,4};
+
+
+struct Node{
+    struct point p1;
+    int value;
+    struct Node *next;
+}a;
+struct Node a={{3,4},5,NULL};
+
+
+struct student
+{
+    int age;
+    char name[20];
+};
+
+
+int main(){
+    struct student s={19,"c"};
+    printf("%d\n",s.age);
+    struct student *p=&s;
+    printf("%d\n",(*p).age);//而不是*(p)n
+    printf("%d\n",p->age);//p是指针，所以用箭头
+}
